@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Compra de boletos</title>
+    <title>Compra de Boletos - Verano Fest</title>
     <link rel="stylesheet" href="/css/boletos.css" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -14,78 +14,150 @@
   <body>
     <header>
       <nav class="navbar">
-        <h1>Verano Fest</h1>
+        <h1 class="logo">Verano Fest</h1>
         <ul class="nav-links">
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#zonas">Zonas</a></li>
-          <li><a href="#ubicacion">Ubicacion</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
         </ul>
       </nav>
     </header>
-    <br /><br />
 
-    <section>
-      <div id="ubicacion">
-        <h1>Centro de eventos la <strong>Macarena</strong></h1>
-        <p>🗓️17/10/2025</p>
-        <div class="galeria-ubicacion">
-          <img
-            src="https://tse4.mm.bing.net/th/id/OIP._Q45l5UVOt3tvZBPc3t3DQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-            alt=""
-            data-aos="flip-down"
-            data-aos-duration="2500"
-          />
-          <img
-            src="https://ticketlive.com.co/wp-content/uploads/2024/12/la-macarena-en-medellin-tiene-una-agenda-cargada-con-mas-de-20-conciertos-este-semestre-1229420.jpg"
-            alt=""
-            data-aos="flip-right"
-            data-aos-duration="3000"
-          />
-        </div>
+    <section id="ubicacion" class="section">
+      <h1>Centro de eventos <strong>La Macarena</strong></h1>
+      <p>🗓️ 17 de Octubre 2025</p>
+      <div class="galeria-ubicacion">
+        <img
+          src="https://tse4.mm.bing.net/th/id/OIP._Q45l5UVOt3tvZBPc3t3DQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+          alt="La Macarena"
+          data-aos="flip-down"
+          data-aos-duration="2500"
+        />
+        <img
+          src="https://ticketlive.com.co/wp-content/uploads/2024/12/la-macarena-en-medellin-tiene-una-agenda-cargada-con-mas-de-20-conciertos-este-semestre-1229420.jpg"
+          alt="Concierto Medellín"
+          data-aos="flip-right"
+          data-aos-duration="3000"
+        />
       </div>
     </section>
 
-    <article>
-      <table id="zonas" border="1">
-        <thead>
-          <tr>
-            <th>Zona</th>
-            <th>Descripción</th>
-            <th>Precio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>MEET AND GREET</td>
-            <td>La oportunidad para conocer a tu artista favorito</td>
-            <td>$2000</td>
-          </tr>
-          <tr>
-            <td>VIP</td>
-            <td>La zona más exclusiva</td>
-            <td>$1200</td>
-          </tr>
-          <tr>
-            <td>PLATEA</td>
-            <td>Zona grupal</td>
-            <td>$800</td>
-          </tr>
-          <tr>
-            <td>GRADAS</td>
-            <td>Perfecto si no tienes dinero</td>
-            <td>$500</td>
-          </tr>
-        </tbody>
-      </table>
-    </article>
+    <section id="zonas" class="section">
+      <h2>Compra tus entradas</h2>
+      <div class="tabla-container">
+        <table class="tabla-zonas">
+          <thead>
+            <tr>
+              <th>Zona</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MEET AND GREET</td>
+              <td>La oportunidad para conocer a tu artista favorito</td>
+              <td>$2000</td>
+              <td>
+                <form>
+                  <script
+                    src="https://checkout.epayco.co/checkout.js"
+                    class="epayco-button"
+                    data-epayco-key="PUBLIC_KEY"
+                    data-epayco-amount="2000"
+                    data-epayco-name="MEET AND GREET"
+                    data-epayco-description="Entrada Meet and Greet"
+                    data-epayco-currency="cop"
+                    data-epayco-country="CO"
+                    data-epayco-test="true"
+                    data-epayco-external="false"
+                    data-epayco-response="https://tusitio.com/respuesta"
+                    data-epayco-confirmation="https://tusitio.com/confirmacion"
+                  ></script>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>VIP</td>
+              <td>La zona más exclusiva</td>
+              <td>$1200</td>
+              <td>
+                <form>
+                  <script
+                    src="https://checkout.epayco.co/checkout.js"
+                    class="epayco-button"
+                    data-epayco-key="PUBLIC_KEY"
+                    data-epayco-amount="1200"
+                    data-epayco-name="VIP"
+                    data-epayco-description="Entrada VIP"
+                    data-epayco-currency="cop"
+                    data-epayco-country="CO"
+                    data-epayco-test="true"
+                    data-epayco-external="false"
+                    data-epayco-response="https://tusitio.com/respuesta"
+                    data-epayco-confirmation="https://tusitio.com/confirmacion"
+                  ></script>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>PLATEA</td>
+              <td>Zona grupal</td>
+              <td>$800</td>
+              <td>
+                <form>
+                  <script
+                    src="https://checkout.epayco.co/checkout.js"
+                    class="epayco-button"
+                    data-epayco-key="PUBLIC_KEY"
+                    data-epayco-amount="800"
+                    data-epayco-name="PLATEA"
+                    data-epayco-description="Entrada Platea"
+                    data-epayco-currency="cop"
+                    data-epayco-country="CO"
+                    data-epayco-test="true"
+                    data-epayco-external="false"
+                    data-epayco-response="https://tusitio.com/respuesta"
+                    data-epayco-confirmation="https://tusitio.com/confirmacion"
+                  ></script>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>GRADAS</td>
+              <td>Perfecto si no tienes dinero</td>
+              <td>$500</td>
+              <td>
+                <form>
+                  <script
+                    src="https://checkout.epayco.co/checkout.js"
+                    class="epayco-button"
+                    data-epayco-key="PUBLIC_KEY"
+                    data-epayco-amount="500"
+                    data-epayco-name="GRADAS"
+                    data-epayco-description="Entrada Gradas"
+                    data-epayco-currency="cop"
+                    data-epayco-country="CO"
+                    data-epayco-test="true"
+                    data-epayco-external="false"
+                    data-epayco-response="https://tusitio.com/respuesta"
+                    data-epayco-confirmation="https://tusitio.com/confirmacion"
+                  ></script>
+                </form>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
     <footer>
-      <ul class="maps">
+      <ul class="social">
         <li><i class="bx bxl-facebook"></i> Tu boleta</li>
         <li><i class="bx bxl-instagram"></i> Tu_boleta</li>
         <li><i class="bx bxl-whatsapp"></i> 3234567898</li>
       </ul>
-
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.108327267538!2d-75.5828072259208!3d6.249454193738959!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429074ecff633%3A0x9986f9dfbac17443!2sLa%20Macarena!5e0!3m2!1ses!2sco!4v1755269839522!5m2!1ses!2sco"
         allowfullscreen=""
@@ -94,6 +166,7 @@
       >
       </iframe>
     </footer>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

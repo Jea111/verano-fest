@@ -1,176 +1,318 @@
-:root {
-  --naranja: #ff6b35;
-  --amarillo: #ffd166;
-  --verde: #06d6a0;
-  --beige: #faf3e0;
-  --azul: #073b4c;
-}
 * {
-  margin: auto;
-  padding: auto;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-/* 
-.navbar {
-  background-color: var(--naranja);
-  width: 100%;
-  height: 100%;
-}
-ul,
-li,
-a {
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  text-decoration: none;
-  font-family: "Segoe UI", Tahoma;
-  font-size: 25px;
-  color: var(--beige);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar a:hover {
-  background-color: var(--azul);
-} */
+body {
+  background: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
 
 .navbar {
-  /* position: fixed; */
-  top: 0;
-  left: 0;
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: var(--naranja);
-  color: var(--beige);
-  /* margin-bottom: 30px; */
-  /* z-index: 1000; */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 15px 50px;
+  background: #111;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
-  gap: 1rem;
+  list-style: none;
+  gap: 25px;
 }
 
 .nav-links a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  font-weight: bold;
+  transition: 0.3s;
 }
-#ubicacion h1 {
-  justify-content: center;
-  color: var(--beige);
+
+.nav-links a:hover {
+  color: #ff6600;
 }
-#ubicacion p {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-  font-size: 30px;
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
 }
-#ubicacion {
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #111;
+}
+
+.galeria-ubicacion {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: var(--azul);
-  box-shadow: 2px 2px 2px 2px var(--amarillo);
-  margin-block: 30ox;
-}
-.galeria-ubicacion {
-  /* display: flex; */
-  gap: 10px;
-
-  padding: 10px;
-  max-width: 100%;
-  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .galeria-ubicacion img {
-  width: 100%;
-  height: auto;
-  max-width: 225px;
-
+  width: 350px;
   border-radius: 15px;
-  box-shadow: 0px 2px 4px #000;
-}
-#zonas {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 19px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-#zonas th,
-#zonas td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: center;
-}
-
-#zonas th {
-  background-color: var(--naranja);
-  color: white;
-}
-
-#zonas tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-footer {
-  background-color: var(--naranja);
-  color: white;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-footer .maps i {
-  font-size: 1.5rem;
-  color: white;
-}
-
-footer .maps {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto 1rem auto;
+.tabla-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
 }
 
-footer .maps li {
+.tabla-zonas {
+  width: 90%;
+  max-width: 900px;
+  border-collapse: collapse;
+  margin-top: 30px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-zonas th,
+.tabla-zonas td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla-zonas th {
+  background: #111;
+  color: #fff;
+}
+
+.tabla-zonas tr:hover {
+  background: #f9f9f9;
+}
+
+.epayco-button {
+  display: inline-block !important;
+  background: #ff6600 !important;
+  color: #fff !important;
+  padding: 10px 20px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  transition: 0.3s !important;
+}
+
+.epayco-button:hover {
+  background: #cc5200 !important;
+}
+
+footer {
+  background: #111;
+  color: #fff;
+  padding: 30px;
+  text-align: center;
+}
+
+footer .social {
+  list-style: none;
   display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.95rem;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
 footer iframe {
-  display: block;
-  max-width: 400px;
   width: 100%;
-  height: 200px;
-  margin: 0 auto;
-  border: 0;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  height: 300px;
+  border: none;
+  border-radius: 12px;
+}
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 12px 24px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  .section {
+    padding: 48px 16px;
+  }
+
+  .galeria-ubicacion {
+    flex-wrap: wrap;
+  }
+
+  .galeria-ubicacion img {
+    width: 48%;
+    max-width: 460px;
+  }
+
+  .tabla-zonas {
+    width: 95%;
+  }
+
+  footer iframe {
+    height: 320px;
+  }
 }
 
-/*  Móvil */
-@media screen and (max-width: 480px) {
-  footer iframe {
-    height: 180px;
-    border-radius: 5px;
+@media (max-width: 768px) {
+  .logo {
+    font-size: 1.25rem;
   }
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
+
+  .nav-links a {
+    font-size: 0.95rem;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+  }
+
+  .galeria-ubicacion img {
     width: 100%;
-    align-items: center;
+    max-width: 560px;
+  }
+
+  .tabla-zonas th,
+  .tabla-zonas td {
+    padding: 12px;
+  }
+
+  .epayco-button {
+    padding: 10px 16px !important;
+  }
+
+  footer .social {
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  footer iframe {
+    height: 300px;
   }
 }
-@media screen and (max-width: 480px) {
+
+@media (max-width: 600px) {
+  /* Navbar en columna */
   .navbar {
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    text-align: center;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .section {
+    padding: 36px 14px;
+  }
+
+  .tabla-zonas {
+    width: 100%;
+    border-radius: 10px;
+    overflow: visible;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .tabla-zonas thead {
+    display: none;
+  }
+
+  .tabla-zonas tbody tr {
+    display: block;
+    background: #fff;
+    margin: 14px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eee;
+  }
+
+  .tabla-zonas tbody td {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    gap: 10px;
+    text-align: left;
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .tabla-zonas tbody tr td:last-child {
+    border-bottom: none;
+  }
+
+  .tabla-zonas tbody td:nth-child(1)::before {
+    content: "Zona";
+    font-weight: 600;
+    color: #111;
+  }
+  .tabla-zonas tbody td:nth-child(2)::before {
+    content: "Descripción";
+    font-weight: 600;
+    color: #111;
+  }
+  .tabla-zonas tbody td:nth-child(3)::before {
+    content: "Precio";
+    font-weight: 600;
+    color: #111;
+  }
+  .tabla-zonas tbody td:nth-child(4)::before {
+    content: "Comprar";
+    font-weight: 600;
+    color: #111;
+  }
+
+  .tabla-zonas tbody td:nth-child(4) {
+    display: block;
+    padding: 14px;
+  }
+
+  .epayco-button {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 12px 18px !important;
+    border-radius: 10px !important;
+  }
+
+  .galeria-ubicacion {
+    gap: 14px;
+  }
+  .galeria-ubicacion img {
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  footer {
+    padding: 22px 14px;
+  }
+  footer iframe {
+    height: 260px;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .tabla-zonas tbody td {
+    grid-template-columns: 100px 1fr;
+    padding: 12px;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .epayco-button {
+    padding: 11px !important;
   }
 }
