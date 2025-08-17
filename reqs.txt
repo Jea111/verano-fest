@@ -1,0 +1,14 @@
+3. Landing page de un evento (concierto, feria, festival)
+
+Secciones: Descripción, fecha y lugar, artistas/expositores, compra de boletos.
+
+Responsive: Timeline horizontal que se convierte en vertical en pantallas pequeñas.
+
+Plus: Paleta de colores vibrante y tipografía llamativa.
+
+Ventaja: Permite usar imágenes llamativas y se presta a diseño creativo.
+
+Compra de boletos: 
+1. Elegir zona del evento(Vip,Platea,Gradas).
+2.Elegir banco(Nequi,Bancolombia,Daviplata,Banco de bogotá)
+3.Elegir día(2 días de evento)
