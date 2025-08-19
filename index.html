@@ -92,20 +92,28 @@
     </footer>
     <script src="/js/script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
 
     <script>
       AOS.init();
+      Toastify({
+        text: " ¡No olvides el evento 17 de octubre\n¡Compra tus entradas!",
+        duration: 8000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
 
-      Swal.fire({
-        title: " Bienvenido",
-        text: "¡Compra tu entrada y diviertete!",
-        icon: "success",
-        confirmButtonText: "Aceptar",
-        background: "#1a1a1a",
-        color: "#fff",
-        confirmButtonColor: " #facc15",
-      });
+        stopOnFocus: true,
+      }).showToast();
     </script>
   </body>
 </html>

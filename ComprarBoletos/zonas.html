@@ -31,13 +31,13 @@
           src="https://tse4.mm.bing.net/th/id/OIP._Q45l5UVOt3tvZBPc3t3DQHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
           alt="La Macarena"
           data-aos="flip-down"
-          data-aos-duration="2500"
+          data-aos-duration="5000"
         />
         <img
           src="https://ticketlive.com.co/wp-content/uploads/2024/12/la-macarena-en-medellin-tiene-una-agenda-cargada-con-mas-de-20-conciertos-este-semestre-1229420.jpg"
           alt="Concierto Medellín"
           data-aos="flip-right"
-          data-aos-duration="3000"
+          data-aos-duration="5000"
         />
       </div>
     </section>
@@ -168,8 +168,27 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
     <script>
       AOS.init();
+      Toastify({
+        text: " ¡No olvides el evento 17 de octubre\n¡Compra tus entradas!",
+        duration: 8000,
+        close: true,
+        gravity: "top",
+        position: "right",
+        backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)",
+        stopOnFocus: true,
+      }).showToast();
     </script>
   </body>
 </html>
