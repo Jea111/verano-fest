@@ -51,12 +51,10 @@ header {
 .nav-links li a:hover {
   color: #facc15;
 }
-
 .hero {
   height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("/assets/bg-hero.png") no-repeat center center/cover;
-
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,6 +89,77 @@ header {
   background: #eab308;
 }
 
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("/assets/bg-hero.png") no-repeat center center/cover;
+
+  animation: droneZoom 12s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes droneZoom {
+  0% {
+    transform: scale(1.4) translateY(15px);
+  }
+  50% {
+    transform: scale(1.1) translateY(-5px);
+  }
+  100% {
+    transform: scale(1) translateY(-10px);
+  }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+      1px 1px at 20px 30px,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    ),
+    radial-gradient(1px 1px at 40px 70px, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(
+      1px 1px at 200px 80px,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+  background-size: 300px 200px, 400px 300px, 200px 150px, 500px 400px;
+  animation: float 8s ease-in-out infinite;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-8px) translateX(3px);
+  }
+  50% {
+    transform: translateY(-15px) translateX(-3px);
+  }
+  75% {
+    transform: translateY(-8px) translateX(2px);
+  }
+}
 .section {
   max-width: 1200px;
   margin: auto;
