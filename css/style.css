@@ -10,7 +10,6 @@ body {
   color: #111;
   line-height: 1.6;
 }
-
 header {
   background: #111;
   position: fixed;
@@ -19,38 +18,91 @@ header {
   left: 0;
   z-index: 1000;
 }
+header h1 {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+header h1:hover {
+  color: #facc15;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header .nav-links .nav-item {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s, border-bottom 0.3s;
+  padding: 0.3rem 0;
+  position: relative;
+}
+
+header .nav-links .nav-item:hover {
+  color: #facc15;
+}
+
+header .nav-links .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #facc15;
+  transition: width 0.3s;
+}
+
+header .nav-links .nav-item:hover::after {
+  width: 100%;
+}
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem 2rem;
   max-width: 1200px;
   margin: auto;
 }
 
 .logo {
-  color: #fff;
+  color: #fff !important;
   font-size: 1.5rem;
   font-weight: 700;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links li a {
-  color: #fff;
-  text-decoration: none;
+.nav-links .nav-link {
+  color: #fff !important;
   font-weight: 500;
   transition: color 0.3s;
 }
 
-.nav-links li a:hover {
-  color: #facc15;
+.nav-links .nav-link:hover {
+  color: #facc15 !important;
 }
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
 .hero {
   height: 100vh;
   position: relative;
@@ -74,7 +126,7 @@ header {
   margin-bottom: 2rem;
 }
 
-.btn {
+.boleto {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background: #facc15;
@@ -85,7 +137,7 @@ header {
   transition: background 0.3s;
 }
 
-.btn:hover {
+.boleto:hover {
   background: #eab308;
 }
 
@@ -176,7 +228,7 @@ header {
 .section p {
   max-width: 800px;
   margin: auto;
-  color: #444;
+  color: #111;
 }
 
 .artistas .grid-artistas {
@@ -267,7 +319,7 @@ footer {
   .hero p {
     font-size: 0.9rem;
   }
-  .btn {
+  .boleto {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
   }
